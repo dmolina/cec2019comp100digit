@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <malloc.h>
+#include <assert.h>
 
 #define INF 1.0e99
 #define EPS 1.0e-14
@@ -247,6 +248,8 @@ void weierstrass_func (double *x, double *f, int nx, double *Os,double *Mr,int s
 
 	sr_func (x, z, nx, Os, Mr, 0.5/100.0, s_flag, r_flag); /* shift and rotate */
 
+  assert(nx > 0);
+
 	for (i=0; i<nx; i++)
 	{
 		sum = 0.0;
@@ -442,8 +445,10 @@ void asyfunc (double *x, double *xasy, int nx, double beta)
 
 void oszfunc (double *x, double *xosz, int nx)
 {
+  const double INIT_XX = -1000;
 	int i,sx;
-	double c1,c2,xx;
+	double c1,c2,xx=INIT_XX;
+
     for (i=0; i<nx; i++)
     {
 		if (i==0||i==nx-1)
@@ -466,6 +471,7 @@ void oszfunc (double *x, double *xosz, int nx)
 				sx=0;
 			else
 				sx=-1;
+      assert(xx != INIT_XX);
 			xosz[i]=sx*exp(xx+0.049*(sin(c1*xx)+sin(c2*xx)));
 		}
 		else
