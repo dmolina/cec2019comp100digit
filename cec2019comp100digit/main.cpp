@@ -40,7 +40,7 @@ void main()
 
 		for(k=0;k<n;k++)
 		{
-				fscanf(fpt,"%Lf",&x[k]);
+				fscanf(fpt,"%lf",&x[k]);
 				/*printf("%Lf\n",x[k]);*/
 		}
 
@@ -58,7 +58,7 @@ void main()
 			cec19_test_func(x, f, n,m,func_num);
 			for (j = 0; j < 2; j++)
 			{
-				printf(" f%d(x[%d]) = %Lf,",func_num,j+1,f[j]);
+				printf(" f%d(x[%d]) = %lf,",func_num,j+1,f[j]);
 			}
 			printf("\n");
 		}
