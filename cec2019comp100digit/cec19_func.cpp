@@ -43,7 +43,7 @@ void cec19_test_func(double *, double *,int,int,int);
 
 void cec19_test_func(double *x, double *f, int nx, int mx,int func_num)
 {
-	int cf_num=10,i,j;
+	int i;
 	if (ini_flag==1)
 	{
 		if ((n_flag!=nx)||(func_flag!=func_num))
@@ -490,10 +490,6 @@ void Lennard_Jones(double *x,int D, double *f)  // find the atomic configuration
 	int i, j, k, a, b;
 	long double xd, yd, zd, ed, ud, sum = 0;
 
-	
-	static double minima[] = { -1.,-3.,-6.,-9.103852,-12.712062,-16.505384,-19.821489,-24.113360,
-		-28.422532,-32.765970,-37.967600,-44.326801,-47.845157,-52.322627,-56.815742,-61.317995,
-		-66.530949,-72.659782,-77.1777043,-81.684571,-86.809782,-02.844472,-97.348815,-102.372663 };
 
 	k = D / 3;
 	if (k < 2)  // default if k<2
