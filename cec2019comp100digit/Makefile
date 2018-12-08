@@ -1,8 +1,18 @@
 CC=g++
-CXXFLAGS=-Wall -pedantic -std=c++11 -O3
-#CXXFLAGS=-Wall -pedantic -std=c++0x -ggdb -DDEBUG
+CFLAGS=-Wall -pedantic -std=c++11 -O3
+EXEC = main
+DEPS = 
+RM = rm
+SOURCES = $(shell ls *.cpp)
+OBJS = $(SOURCES:%.cpp=%.o)
 
-OBJECTS=cec19_func.o
+$(EXEC): $(OBJS)
+	$(CC) $(CFLAGS) -o $(EXEC) $(OBJS)
 
-main:   main.cpp $(OBJECTS)
+%.o: %.cpp $(DEPS)
+	$(CC) $(CFLAGS) -c $< -o $@
 
+.PHONY: clean
+
+clean:
+	$(RM) *.o $(EXEC)
