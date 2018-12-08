@@ -16,7 +16,7 @@ int main(void)
 	int i,j,k,n,m,func_num;
 	double *f,*x;
 	FILE *fpt;
-	char FileName[10];
+	char FileName[30];
   ini_flag = 0;
 	m=2;
 	n=10;
