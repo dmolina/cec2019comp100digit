@@ -8,12 +8,8 @@
 #include <math.h>
 #include <malloc.h>
 
-
-void cec17_test_func(double *, double *,int,int,int);
-
-double *OShift,*M,*y,*z,*x_bound;
-int ini_flag=0,n_flag,func_flag,*SS;
-
+#define _MAIN
+#include "cec19_func.h"
 
 int main(void)
 {
@@ -21,6 +17,7 @@ int main(void)
 	double *f,*x;
 	FILE *fpt;
 	char FileName[10];
+  ini_flag = 0;
 	m=2;
 	n=10;
 	x=(double *)malloc(m*n*sizeof(double));
