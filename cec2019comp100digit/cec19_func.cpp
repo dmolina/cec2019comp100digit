@@ -9,7 +9,6 @@
   Here x is a D*pop_size matrix.
 */
 
-#include <WINDOWS.H>      
 #include <stdio.h>
 #include <math.h>
 #include <malloc.h>

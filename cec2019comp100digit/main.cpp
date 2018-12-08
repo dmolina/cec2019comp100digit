@@ -4,7 +4,6 @@
   Sep. 21th 2018
 */
 
-#include <WINDOWS.H>    
 #include <stdio.h>
 #include <math.h>
 #include <malloc.h>
