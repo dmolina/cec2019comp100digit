@@ -4,10 +4,10 @@
 void set_dir_path(const char *path);
 void cec19_test_func(double *, double *,int,int,int);
 
-#ifdef _MAIN
+#ifndef _MAIN
 #define EXTERN extern
 #else
-#define EXTERN 
+#define EXTERN
 #endif
 
 EXTERN double *OShift,*M,*y,*z,*x_bound;
