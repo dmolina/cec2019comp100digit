@@ -13,6 +13,7 @@
 #include <math.h>
 #include <malloc.h>
 #include <assert.h>
+#include <string.h>
 #include "cec19_func.h"
 
 #define INF 1.0e99
@@ -40,11 +41,19 @@ void oszfunc (double *, double *, int);
 
 void cec19_test_func(double *, double *,int,int,int);
 
+static const char *dir_path;
+
+void set_dir_path(const char *path) {
+  dir_path = strdup(path);
+}
+
 void cec19_test_func(double *x, double *f, int nx, int mx,int func_num)
 {
 	int i;
 	if (ini_flag==1)
 	{
+    assert(dir_path != nullptr);
+
 		if ((n_flag!=nx)||(func_flag!=func_num))
 		{
 			ini_flag=0;
@@ -75,7 +84,7 @@ void cec19_test_func(double *x, double *f, int nx, int mx,int func_num)
 		/* Load Matrix M*/
 		if (func_num > 3)
 		{
-		sprintf(FileName, "input_data/M_%d_D%d.txt", func_num,nx);
+      sprintf(FileName, "%s/M_%d_D%d.txt", dir_path, func_num,nx);
 		fpt = fopen(FileName,"r");
 		if (fpt==NULL)
 		{
@@ -95,7 +104,7 @@ void cec19_test_func(double *x, double *f, int nx, int mx,int func_num)
 		/* Load shift_data */
 		if (func_num > 3)
 		{
-		sprintf(FileName, "input_data/shift_data_%d.txt", func_num);
+      sprintf(FileName, "%s/shift_data_%d.txt", dir_path, func_num);
 		fpt = fopen(FileName,"r");
 		if (fpt==NULL)
 		{

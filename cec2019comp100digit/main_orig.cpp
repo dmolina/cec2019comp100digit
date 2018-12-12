@@ -22,6 +22,9 @@ int main(void)
 	n=10;
 	x=(double *)malloc(m*n*sizeof(double));
 	f=(double *)malloc(sizeof(double)  *  m);
+  const char dir_path[] = "input_data";
+  set_dir_path(dir_path);
+
 	for (i = 0; i < 10; i++)
 	{
 		func_num=i+1;

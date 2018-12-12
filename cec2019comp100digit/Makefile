@@ -1,13 +1,15 @@
-CC=g++
+CC=gcc
 CFLAGS=-Wall -pedantic -std=c++11 -O3
-EXEC = main
+EXEC = main_orig
 DEPS = 
 RM = rm
 SOURCES = $(shell ls *.cpp)
 OBJS = $(SOURCES:%.cpp=%.o)
+OBJS = cec19_func.o
+LIBS = -lm
 
-$(EXEC): $(OBJS)
-	$(CC) $(CFLAGS) -o $(EXEC) $(OBJS)
+main_orig: $(OBJS) main_orig.o
+	$(CC) $(CFLAGS) -o main_orig main_orig.o $(OBJS) $(LIBS)
 
 %.o: %.cpp $(DEPS)
 	$(CC) $(CFLAGS) -c $< -o $@

@@ -104,3 +104,4 @@ venv.bak/
 .mypy_cache/
 *.o
 main
+main_orig

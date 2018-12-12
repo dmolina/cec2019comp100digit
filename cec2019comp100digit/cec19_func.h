@@ -1,6 +1,7 @@
 #ifndef _CEC19_FUNC_H_
 #define _CEC19_FUNC_H_
 
+void set_dir_path(const char *path);
 void cec19_test_func(double *, double *,int,int,int);
 
 #ifdef _MAIN
