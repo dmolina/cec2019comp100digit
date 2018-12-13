@@ -53,8 +53,56 @@ version type in 'make' in the root directory of source code.
 
 There are two equivalents demo executables: demo and demo2. 
 
-**REMEMBER: To run the C++ version the directory cdatafiles must be available in the working directory**. 
-In the python version, these files are included in the packages, so it is not needed. 
+**REMEMBER: To run the C++ version the directory input_data must be available in the working directory**. 
+In the python version, these files are included in the packages, so it is not
+needed.
+
+Quickstart
+----------
+
+The package is very simple to use. There is a package cec2019comp100digit with
+three functions:
+
+- **init(fun_id, Dim)**
+
+Init the function for the dimension selected.
+
+- **eval(sol)**
+
+Eval the solution, when sol is a numpy (or array) of dimension *Dim*.
+
+- **end()**
+
+Free resources.
+
+Init function
+-------------
+>>> from cec2019comp100digit import cec2019comp100digit
+>>> bench = cec2019comp100digit
+>>> bench.init(3, 10) # Init function 3
+
+Create a random solution
+~~~~~~~~~~~~~~~~~~~~~~~~
+>>> import numpy as np
+>>> sol = np.random.rand(10)
+
+Evaluate a solution
+~~~~~~~~~~~~~~~~~~~
+>>> bench.eval(sol)
+18010038.104525752
+
+Freeing resources
+~~~~~~~~~~~~~~~~~
+>>> bench.end()
+
+Contact
+-------
+
+Python package 
+  Daniel Molina @ Computer Science Deparment, University of Granada
+  Please feel free to contact me at <dmolina@decsai.ugr.es> for any enquiries or
+  suggestions.
+
 
 Last Updated
 ~~~~~~~~~~~~
