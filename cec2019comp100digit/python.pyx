@@ -16,7 +16,7 @@ def init(int fun, int dim):
     Evaluate the solution
     """
     set_func(fun, dim)
-    cdef bytes dir_name = resource_filename("cec2019comp100digit", "cdatafiles").encode()
+    cdef bytes dir_name = resource_filename(__name__, "input_data").encode()
     set_dir_path(dir_name)
 
 def eval(double[::1] x):

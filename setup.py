@@ -55,7 +55,7 @@ setup(
     packages=['cec2019comp100digit'],
     install_requires=['cython', 'numpy'],
     ext_modules=cythonize(cec2019comp100digit),
-    package_data={'cec2019comp100digit': ['cdatafiles/*.txt']},
+    package_data={'cec2019comp100digit': ['input_data/*.txt']},
     tests_require=['pytest'],
     cmdclass={'build_ext': build_ext, 'test': PyTest},
     classifiers=[
