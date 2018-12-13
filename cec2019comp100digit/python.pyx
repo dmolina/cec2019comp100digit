@@ -3,7 +3,6 @@
 from os import path
 from collections import namedtuple
 from pkg_resources import resource_filename
-from libc.stdlib cimport malloc, free
 import cython
 
 cdef extern from "eval_func.h":
