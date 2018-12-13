@@ -88,7 +88,7 @@ void cec19_test_func(double *x, double *f, int nx, int mx,int func_num)
 		fpt = fopen(FileName,"r");
 		if (fpt==NULL)
 		{
-		    printf("\n Error: Cannot open input file for reading \n");
+      printf("\n Error: Cannot open input '%s' file for reading \n", FileName);
 		}
 		M=(double*)malloc(nx*nx*sizeof(double));
 		if (M==NULL)
@@ -108,7 +108,7 @@ void cec19_test_func(double *x, double *f, int nx, int mx,int func_num)
 		fpt = fopen(FileName,"r");
 		if (fpt==NULL)
 		{
-			printf("\n Error: Cannot open input file for reading \n");
+			printf("\n Error: Cannot open input '%s' file for reading \n", FileName);
 		}
 
 		OShift=(double *)malloc(nx*sizeof(double));
