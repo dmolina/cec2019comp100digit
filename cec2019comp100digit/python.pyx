@@ -15,6 +15,7 @@ def init(int fun, int dim):
     """
     Evaluate the solution
     """
+    free_fun()
     set_func(fun, dim)
     cdef bytes dir_name = resource_filename(__name__, "input_data").encode()
     set_dir_path(dir_name)
