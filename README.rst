@@ -12,14 +12,16 @@ Note
 ----
 If you are to use any part of this code, please cite the following publications:
 
-K. V. Price, N. H. Awad, M. Z. Ali, P. N. Suganthan, "Problem Definitions and
+   K. V. Price, N. H. Awad, M. Z. Ali, P. N. Suganthan, "Problem Definitions and
    Evaluation Criteria for the 100-Digit Challenge Special Session and
    Competition on Single Objective Numerical Optimization,"  Technical Report,
    Nanyang Technological University, Singapore, November 2018.
+
 http://web.mysites.ntu.edu.sg/epnsugan/PublicSite/Shared%20Documents/Forms/AllItems.aspx?RootFolder=%2fepnsugan%2fPublicSite%2fShared%20Documents%2fCEC%2d2019&FolderCTID=&View=%7bDAF31868%2d97D8%2d4779%2dAE49%2d9CEC4DC3F310%7d
 
 Requirements
 ------------
+
 - GNU Make
 - GNU G++
 - Python
@@ -27,6 +29,7 @@ Requirements
 
 Testing Environment
 -------------------
+
 - Debian GNU/Linux jessie/sid
 - GNU Make 3.81
 - g++ (Debian 4.7.3-4) 4.7.3
@@ -64,16 +67,13 @@ The package is very simple to use. There is a package cec2019comp100digit with
 three functions:
 
 - **init(fun_id, Dim)**
-
-Init the function for the dimension selected.
+  Init the function for the dimension selected.
 
 - **eval(sol)**
-
-Eval the solution, when sol is a numpy (or array) of dimension *Dim*.
+  Eval the solution, when sol is a numpy (or array) of dimension *Dim*.
 
 - **end()**
-
-Free resources.
+  Free resources.
 
 Init function
 -------------
@@ -106,7 +106,6 @@ Python package
 
 Last Updated
 ~~~~~~~~~~~~
-
 - C++ version
   <2018-12-08>
 
