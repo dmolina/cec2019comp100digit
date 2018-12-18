@@ -9,7 +9,7 @@ import sys
 #    sources = ['ea/cbenchmarks.pyx'],
 ##    include_dirs = ['include/']
 #)
-sourcefiles = ['cec2019comp100digit/python.pyx']
+sourcefiles = ['cec2019comp100digit/cec2019comp100digit.pyx']
 
 sourcefiles += ['cec2019comp100digit/eval_func.cpp', 'cec2019comp100digit/cec19_func.cpp']
 
@@ -42,7 +42,7 @@ class PyTest(TestCommand):
 
 setup(
     name='cec2019comp100digit',
-    version='0.2',
+    version='0.4',
     author='Daniel Molina',
     author_email='dmolina@decsai.ugr.es',
     maintainer='Daniel Molina',
@@ -54,7 +54,7 @@ setup(
     url='https://github.com/dmolina/cec2019comp100digit',
     packages=['cec2019comp100digit'],
     install_requires=['cython', 'numpy'],
-    ext_modules=cythonize(cec2019comp100digit),
+    ext_modules=[cec2019comp100digit],
     package_data={'cec2019comp100digit': ['input_data/*.txt']},
     tests_require=['pytest'],
     cmdclass={'build_ext': build_ext, 'test': PyTest},
