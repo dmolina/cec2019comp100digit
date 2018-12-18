@@ -1,7 +1,7 @@
 /*
   CEC19 Test Function Suite 
   Noor Awad (email: noorawad1989@gmail.com) 
-  Oct. 24th 2018
+  Dec. 13th 2018
   1. Run the following command in Matlab window:
   mex cec19_func.cpp -DWINDOWS
   2. Then you can use the test functions as the following example:
@@ -522,7 +522,8 @@ void Lennard_Jones(double *x,int D, double *f)  // find the atomic configuration
 			zd = x[a + 2] - x[b + 2];
 			ed = xd*xd + yd*yd + zd*zd;
 			ud = ed*ed*ed;
-			if (ed>0) sum += (1.0 / ud - 2.0) / ud;
+			if (ud > 1.0e-10) sum += (1.0 / ud - 2.0) / ud;
+			else sum += 1.0e20; 
 		}
 	}
 	
