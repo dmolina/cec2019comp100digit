@@ -15,6 +15,7 @@ sourcefiles += ['cec2019comp100digit/eval_func.cpp', 'cec2019comp100digit/cec19_
 
 cec2019comp100digit = Extension("cec2019comp100digit.cec2019comp100digit",
                         sourcefiles,
+                        include_dirs=['cec2019comp100digit/'],
                         language="c++",
                         extra_compile_args=["-std=c++11"],
                         libraries=["m"])  # Unix-like specific
@@ -42,7 +43,7 @@ class PyTest(TestCommand):
 
 setup(
     name='cec2019comp100digit',
-    version='0.4',
+    version='0.6',
     author='Daniel Molina',
     author_email='dmolina@decsai.ugr.es',
     maintainer='Daniel Molina',
@@ -55,7 +56,7 @@ setup(
     packages=['cec2019comp100digit'],
     install_requires=['cython', 'numpy'],
     ext_modules=[cec2019comp100digit],
-    package_data={'cec2019comp100digit': ['input_data/*.txt']},
+    package_data={'cec2019comp100digit': ['input_data/*.txt', '*.h']},
     tests_require=['pytest'],
     cmdclass={'build_ext': build_ext, 'test': PyTest},
     classifiers=[
