@@ -43,7 +43,7 @@ class PyTest(TestCommand):
 
 setup(
     name='cec2019comp100digit',
-    version='0.7',
+    version='0.8',
     author='Daniel Molina',
     author_email='dmolina@decsai.ugr.es',
     maintainer='Daniel Molina',
