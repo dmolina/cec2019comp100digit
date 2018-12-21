@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 #include <math.h>
-#include <malloc.h>
+#include <stdlib.h>
 
 #define _MAIN
 #include "cec19_func.h"

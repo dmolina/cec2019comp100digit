@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 #include <math.h>
-#include <malloc.h>
+#include <stdlib.h>
 #include <assert.h>
 #include <string.h>
 #include "cec19_func.h"
